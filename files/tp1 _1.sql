@@ -1,4 +1,4 @@
---Créer les 4 tables avec toutes contraintes d’intégrité ****************
+
 CREATE TABLE FORMATIONS(
 NomFormation varchar(50) CONSTRAINT PK_NomFormation PRIMARY KEY,
 Description varchar(50),
@@ -24,4 +24,21 @@ CREATE TABLE PARTICIPATIONS(
 idCandidat int CONSTRAINT FK_idC REFERENCES CANDIDAT(CIN_candidat),
 IdSession varchar (30) CONSTRAINT FK_idS REFERENCES SESSIONS(idSession));
 
--- Ajouter les conditions suivantes **************************
+ALTER TABLE SESSIONS 
+ADD Lieu varchar(15) DEFAULT 'ORADIST' NOT NULL;
+
+
+Alter table FORMATIONS add constraint nom_de UNIQUE
+(Description);
+
+ALTER TABLE CANDIDAT ADD Constraint ck_n1 CHECK(Niveau IN('BAC+2','BAC+3','BAC+4','BAC+5')); 
+
+ALTER TABLE FORMATIONS ADD Constraint ck_d1 CHECK(Duree between 2 AND 90);
+
+ -- Supprimer les tables avec toutes les contraintes
+
+DROP TABLE CANDIDAT cascade constraints;
+DROP TABLE FORMATIONS cascade constraints;
+DROP TABLE SESSIONS cascade constraints;
+DROP TABLE PARTICIPATIONS cascade constraints;
+
