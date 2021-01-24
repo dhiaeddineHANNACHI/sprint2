@@ -13,10 +13,6 @@ import Sprint2.entities.Facture;
 @Repository
 public interface FactureRepository extends CrudRepository<Facture, Integer>
 {
-	
-	
 	 List<Facture> findAll();
-	 Facture findById(int id); 
-	 
-	 
+	 Facture findById(int id);
 }

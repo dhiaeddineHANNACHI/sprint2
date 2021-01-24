@@ -14,7 +14,7 @@ public interface ICommandeService {
 
     Map<String, Boolean> updateCommande(Commande c);
 
-    Map<String, Boolean> DeleteCommande(Commande c);
+    Map<String, Boolean> DeleteCommande(int id);
 
     public Commande getByCommande(int id);
 

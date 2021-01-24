@@ -43,12 +43,8 @@ public class User implements Serializable{
 	@NotNull
 	@Size(min = 5, max = 10)
     private String password;
-
-
     public User() {
     }
-
-
     public User(int id, String nom, String prenom, String username,String password, String email, String adresse, String role) {
     	    	
         this.id = id;
@@ -61,7 +57,6 @@ public class User implements Serializable{
         this.password=password;        
         
     }
-
     public User(String nom, String prenom, String username,String password, String email, String adresse, String role) {
         this.nom = nom;
         this.prenom = prenom;
@@ -70,8 +65,6 @@ public class User implements Serializable{
         this.adresse = adresse;
         this.role = role;
         this.password=password;
-        
-
     }
 	public int getId() {
         return id;

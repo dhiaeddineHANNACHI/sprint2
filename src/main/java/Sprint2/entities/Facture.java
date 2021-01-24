@@ -30,10 +30,10 @@ public class Facture implements Serializable
 	@NotNull
     private float montant;
 
-	@OneToOne(fetch = FetchType.EAGER)
-	@OnDelete(action = OnDeleteAction.CASCADE)
+	@OneToOne(fetch = FetchType.EAGER,cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties("facture")
     private Commande commande;
+
 
 	public void setId(int id_fact) {
 		this.id = id_fact;

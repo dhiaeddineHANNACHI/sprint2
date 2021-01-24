@@ -77,6 +77,4 @@ public class Notification implements Serializable{
    public String toString() {
        return "Notification{" + "id_notif=" + id_notif + ", type=" + type + ", message=" + message + ", vu=" + vu + '}';
    }
-   
-   
 }

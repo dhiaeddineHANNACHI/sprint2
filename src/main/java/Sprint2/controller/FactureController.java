@@ -14,7 +14,6 @@ import javax.validation.Valid;
 @RestController
 public class FactureController 
 {
-
 	@Autowired
     private  FactureServiceImpl factureService ;
 

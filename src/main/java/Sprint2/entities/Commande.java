@@ -2,13 +2,15 @@ package Sprint2.entities;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.List;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+
+import Sprint2.exception.ResourceNotFoundException;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 @Entity
 public class Commande  implements Serializable
@@ -27,50 +29,28 @@ public class Commande  implements Serializable
 		super();
 	}
 
-	@JsonIgnoreProperties("commande")
-	@OneToMany(mappedBy = "commande")
-    private Set<LigneCommande> ligneCommandes = new HashSet<LigneCommande>();
-
-
-
-
-    public Set<LigneCommande> getLigneCommandes()
-	{
-		return ligneCommandes;
-	}
-
-
-    @ManyToOne(cascade = CascadeType.REMOVE)
+	@ManyToOne
 	private Membre membre;
-
-
-
 	public Commande(@NotNull Date date_com, int livraison) {
 		super();
 		this.date_com = date_com;
 		this.livraison = livraison;
 	}
 
-	@OneToOne(mappedBy = "commande")
+	@OneToOne(mappedBy = "commande",fetch = FetchType.EAGER,cascade = CascadeType.REMOVE)
 	private Facture facture;
-
-
-
 
 
 	public void setDate_com(Date date_com)
 	{
 		this.date_com = date_com;
 	}
-
 	public Facture getFacture() {
 		return facture;
 	}
-
 	public void setFacture(Facture facture) {
 		this.facture = facture;
 	}
-	
 	public int getId() {
 		return id;
 	}
@@ -92,9 +72,6 @@ public class Commande  implements Serializable
 	public Date getDate_com() {
 		return date_com;
 	}
-	public void setLigneCommandes(Set<LigneCommande> ligneCommandes) {
-		this.ligneCommandes = ligneCommandes;
-	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -102,6 +79,15 @@ public class Commande  implements Serializable
 		result = prime * result + ((date_com == null) ? 0 : date_com.hashCode());
 		return result;
 	}
+
+
+	@ManyToMany(fetch = FetchType.LAZY)
+	@JoinTable(name ="ligne_Commandes",
+			joinColumns =  @JoinColumn(name = "id_com"),
+			inverseJoinColumns = @JoinColumn(name = "livre_id"))
+	List<Livre> livres;
+
+
 	@Override
 	public boolean equals(Object obj)
 	{
@@ -137,9 +123,6 @@ public class Commande  implements Serializable
 	@Override
 	public String toString()
 	{
-		return "Commande [id_com=" + id + ", date_com=" + date_com + ", livraison=" + livraison + "]";
+		return "Commande [id_com=" + id + ", date_com=" + date_com + ", livraison=" + livraison+ "]";
 	}
-
-
-	
 }

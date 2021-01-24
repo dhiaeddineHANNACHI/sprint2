@@ -4,7 +4,6 @@ import java.io.Serializable;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -16,15 +15,14 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @Entity
 public class Livre implements Serializable{
 	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -85,21 +83,16 @@ public class Livre implements Serializable{
 	        joinColumns =  @JoinColumn(name = "livre_id"),
 	        inverseJoinColumns = @JoinColumn(name = "id_fb")
 	        )
-	    private Set < Feedback > feedbacks = new HashSet < > ();
+	    private Set < Feedback> feedbacks = new HashSet < > ();
 
 
-	@JsonIgnoreProperties("livre")
-	@OneToMany(mappedBy = "livre")
-    private Set<LigneCommande> ligneCommandes = new HashSet<LigneCommande>();
+	@ManyToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+	@JoinTable(name = "ligne_Commandes",
+			joinColumns =  @JoinColumn(name = "livre_id"),
+			inverseJoinColumns = @JoinColumn(name = "id_com"))
+	List<Commande> commandes;
 
 
-
-
-	public Set<LigneCommande> getLigneCommandes() {
-		return ligneCommandes;
-	}
-    
-   
 	public void setLivre_id(int livre_id) {
 		this.livre_id = livre_id;
 	}
@@ -202,11 +195,6 @@ public class Livre implements Serializable{
 
 	public int getLivre_id() {
 		return livre_id;
-	}
-
-
-	public void setLigneCommandes(Set<LigneCommande> ligneCommandes) {
-		this.ligneCommandes = ligneCommandes;
 	}
 
 
