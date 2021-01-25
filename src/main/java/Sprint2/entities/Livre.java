@@ -86,7 +86,8 @@ public class Livre implements Serializable{
 	    private Set < Feedback> feedbacks = new HashSet < > ();
 
 
-	@ManyToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+
+	@ManyToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
 	@JoinTable(name = "ligne_Commandes",
 			joinColumns =  @JoinColumn(name = "livre_id"),
 			inverseJoinColumns = @JoinColumn(name = "id_com"))

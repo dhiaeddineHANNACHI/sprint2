@@ -30,7 +30,7 @@ public class Facture implements Serializable
 	@NotNull
     private float montant;
 
-	@OneToOne(fetch = FetchType.EAGER,cascade = CascadeType.REMOVE)
+	@OneToOne(fetch = FetchType.LAZY,cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties("facture")
     private Commande commande;
 

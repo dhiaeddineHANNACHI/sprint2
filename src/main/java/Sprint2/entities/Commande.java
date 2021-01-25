@@ -9,6 +9,7 @@ import javax.validation.constraints.NotNull;
 import Sprint2.exception.ResourceNotFoundException;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
@@ -37,9 +38,8 @@ public class Commande  implements Serializable
 		this.livraison = livraison;
 	}
 
-	@OneToOne(mappedBy = "commande",fetch = FetchType.EAGER,cascade = CascadeType.REMOVE)
+	@OneToOne(mappedBy = "commande",fetch = FetchType.LAZY,cascade = CascadeType.REMOVE)
 	private Facture facture;
-
 
 	public void setDate_com(Date date_com)
 	{
@@ -80,8 +80,7 @@ public class Commande  implements Serializable
 		return result;
 	}
 
-
-	@ManyToMany(fetch = FetchType.LAZY)
+	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(name ="ligne_Commandes",
 			joinColumns =  @JoinColumn(name = "id_com"),
 			inverseJoinColumns = @JoinColumn(name = "livre_id"))
@@ -123,6 +122,6 @@ public class Commande  implements Serializable
 	@Override
 	public String toString()
 	{
-		return "Commande [id_com=" + id + ", date_com=" + date_com + ", livraison=" + livraison+ "]";
+		return "Commande [id_com=" + id + ", date_com=" + date_com + ", livraison=" + livraison+"]";
 	}
 }
