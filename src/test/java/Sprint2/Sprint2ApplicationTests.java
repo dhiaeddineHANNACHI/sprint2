@@ -1,36 +1,25 @@
 package Sprint2;
 
-import Sprint2.entities.Commande;
-import Sprint2.entities.Membre;
-import Sprint2.services.CommandeServcieImpl;
+import Sprint2.services.ServiceStatisticsVenteImp;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import Sprint2.entities.Facture;
-import Sprint2.services.FactureServiceImpl;
-
-import java.util.Date;
-
 @SpringBootTest
 class Sprint2ApplicationTests {
 
-	
 	@Autowired
-	FactureServiceImpl factureService ;
-
-
-	@Autowired
-	CommandeServcieImpl commandeServcie;
-
-	
+	ServiceStatisticsVenteImp serviceStatisticsVente;
 	@Test
 	void contextLoads() 
 	{
+		System.out.println(serviceStatisticsVente.getBestSales());
+	//	System.out.println(serviceStatisticsVente.getLivreNonVendu());
+	//	System.out.println(serviceStatisticsVente.getLivreVendu());
+	//	System.out.println(serviceStatisticsVente.getRevenue());
+	//	System.out.println(serviceStatisticsVente.getStatCommandeByAuteurLivre());
+	//	System.out.println(serviceStatisticsVente.getStatCommandeByGenreLivre());
 	}
 
-	
-	
-	
-	
+
 }

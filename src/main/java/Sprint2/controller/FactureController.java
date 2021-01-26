@@ -36,7 +36,8 @@ public class FactureController
 	}
 
 	@PutMapping(value = "/updateFacture")
-	public void UpdateFacture(@RequestBody Facture facture)  throws ResourceNotFoundException {
+	public void UpdateFacture(@RequestBody Facture facture)  throws ResourceNotFoundException
+	{
 		factureService.AjouterFacture(facture);
 	}
 

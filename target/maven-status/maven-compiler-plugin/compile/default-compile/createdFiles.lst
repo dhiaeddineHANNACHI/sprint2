@@ -1,9 +1,11 @@
 Sprint2\entities\Livre.class
 Sprint2\Sprint2Application.class
 Sprint2\exception\GlobalExceptionHandler.class
+Sprint2\services\ServiceNLP.class
 Sprint2\services\FactureServiceImpl.class
 Sprint2\entities\Genre.class
 Sprint2\entities\Auteur.class
+Sprint2\services\ServiceStatisticsVente.class
 Sprint2\entities\Feedback.class
 Sprint2\entities\Membre.class
 Sprint2\entities\User.class
@@ -13,6 +15,7 @@ Sprint2\exception\ResourceNotFoundException.class
 Sprint2\repository\CommandeRepository.class
 Sprint2\controller\FactureController.class
 Sprint2\entities\Commande.class
+Sprint2\repository\StatisticsVente.class
 Sprint2\services\CommandeServcieImpl.class
 Sprint2\exception\ErrorResponse.class
 Sprint2\repository\FactureRepository.class

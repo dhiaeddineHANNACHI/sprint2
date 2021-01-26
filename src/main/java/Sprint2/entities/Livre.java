@@ -87,7 +87,7 @@ public class Livre implements Serializable{
 
 
 
-	@ManyToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
+	@ManyToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
 	@JoinTable(name = "ligne_Commandes",
 			joinColumns =  @JoinColumn(name = "livre_id"),
 			inverseJoinColumns = @JoinColumn(name = "id_com"))

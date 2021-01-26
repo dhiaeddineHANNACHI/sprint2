@@ -80,7 +80,7 @@ public class Commande  implements Serializable
 		return result;
 	}
 
-	@ManyToMany(fetch = FetchType.EAGER)
+	@ManyToMany(fetch = FetchType.LAZY)
 	@JoinTable(name ="ligne_Commandes",
 			joinColumns =  @JoinColumn(name = "id_com"),
 			inverseJoinColumns = @JoinColumn(name = "livre_id"))

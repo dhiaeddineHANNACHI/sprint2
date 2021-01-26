@@ -14,7 +14,7 @@ import java.net.URL;
 @Service
 public class ServiceNLP {
 
-    public String NLP ( String ui) throws IOException, JsonEOFException
+    public String NLP ( String ui)
     {
         String output="";
         try {
@@ -35,7 +35,6 @@ public class ServiceNLP {
             System.out.println("Output from Machine Learning Server .... \n");
             while ((output = br.readLine()) != null) {
                 System.out.println(output);
-
             }
         } catch (MalformedURLException e) {
             System.out.println("---------------c");

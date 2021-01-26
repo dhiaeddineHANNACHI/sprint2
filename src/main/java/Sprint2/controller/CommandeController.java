@@ -17,9 +17,10 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
-@RestController
-public class CommandeController {
 
+@RestController
+public class CommandeController
+{
     @Autowired
     CommandeServcieImpl commandeServcie;
 
@@ -31,13 +32,11 @@ public class CommandeController {
     {
         return  commandeServcie.listerCommandes();
     }
-
     @GetMapping("/commande/{id}")
     public Commande getUsersById(@PathVariable(value = "id") int Id) throws ResourceNotFoundException
     {
        return commandeServcie.getByCommande(Id);
     }
-
     @PostMapping(value = "/commande")
     @ResponseBody
     public Map<String, Boolean> AjouterCommande(@RequestBody Commande c)
@@ -50,6 +49,7 @@ public class CommandeController {
     {
         return  commandeServcie.DeleteCommande(id);
     }
+
     @PostMapping(value = "/nlp/{mseg}")
     private String  getNlpFeedBack(@PathVariable(value = "mseg") String mseg) throws IOException {
         return serviceNLP.NLP(mseg);
