@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Set;
 
 import javax.validation.Valid;
 
@@ -18,7 +19,7 @@ public class ReclamationController {
 	@Autowired
 	ReclamationService recService;
 	
-	@GetMapping(value = "/reclamation")
+	@GetMapping(value = "/reclamations")
 	public List<Reclamation> getAllReclamations  () throws ResourceNotFoundException
 	{
 	    return  recService.retrieveAllReclamations();
@@ -45,5 +46,16 @@ public class ReclamationController {
 	public void deleteReclamationById(@PathVariable(value = "id") int id)  throws ResourceNotFoundException
 	{
 		recService.deleteReclamation(id);
+	}
+	
+	@GetMapping("/gerant/{id}/reclamations")
+	public Set<Reclamation> getReclamationByIdGerant(@PathVariable(value = "id") int id) throws ResourceNotFoundException
+	{
+		return  recService.getGerantReclams(id);
+	}
+	@GetMapping("/commande/{id}/reclamations")
+	public Set<Reclamation> getReclamationByIdCommande(@PathVariable(value = "id") int id) throws ResourceNotFoundException
+	{
+		return  recService.getCommandeReclams(id);
 	}
 }

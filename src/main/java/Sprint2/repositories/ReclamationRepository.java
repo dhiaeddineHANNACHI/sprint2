@@ -1,5 +1,7 @@
 package Sprint2.repositories;
 
+import java.util.Set;
+
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
@@ -16,4 +18,10 @@ public interface ReclamationRepository extends CrudRepository<Reclamation, Integ
 	
 	@Query("DELETE FROM Reclamation r WHERE r.reclam_id = :id")
 	Void removeReclamationById(@Param("id") int id);
+	
+	@Query("Select r from Reclamation r WHERE r.affectedTo = :id")
+	Set<Reclamation> getReclamationsByGerant(@Param("id") int id);
+	
+	@Query("Select r from Reclamation r WHERE r.id_com = :id")
+	Set<Reclamation>  getReclamationsByCommande(@Param("id") int id);
 }

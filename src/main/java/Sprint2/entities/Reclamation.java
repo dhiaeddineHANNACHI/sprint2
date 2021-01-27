@@ -49,11 +49,12 @@ public class Reclamation {
 	@Column
     private String filePath;
     @ManyToOne
-    @JoinColumn(name ="id",referencedColumnName ="id",insertable = false,updatable = false)
+    @JoinColumn(name ="affectedTo",referencedColumnName ="id",insertable = false,updatable = false)
 	private Gerant affectedTo;
     @ManyToOne
     @JoinColumn(name ="id_com",referencedColumnName ="id_com",insertable = false,updatable = false)
     private Commande commande;
+    
 	
 	
 	

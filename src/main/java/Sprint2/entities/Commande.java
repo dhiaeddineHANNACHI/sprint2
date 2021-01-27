@@ -39,6 +39,10 @@ public class Commande {
     
     @OneToMany(mappedBy = "commande")
     private Set<LigneCommande> ligneCommandes = new HashSet<LigneCommande>();
+    
+    @OneToMany(mappedBy = "commande")
+    private Set<Reclamation> reclams = new HashSet<Reclamation>();
+    
     public Set<LigneCommande> getLigneCommandes() {
 		return ligneCommandes;
 	}
@@ -82,6 +86,18 @@ public class Commande {
 	@Override
 	public String toString() {
 		return "Commande [id_com=" + id_com + ", date_com=" + date_com + ", livraison=" + livraison + "]";
+	}
+	
+	
+	
+	public Set<Reclamation> getReclams() {
+		return reclams;
+	}
+	public void setReclams(Set<Reclamation> reclams) {
+		this.reclams = reclams;
+	}
+	public void setDate_com(Date date_com) {
+		this.date_com = date_com;
 	}
 	@Override
 	public int hashCode() {
