@@ -1,7 +1,7 @@
 package Sprint2.services;
 
-import Sprint2.Repository.StatGenreRepository;
 import Sprint2.entities.Genre;
+import Sprint2.repositories.StatGenreRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

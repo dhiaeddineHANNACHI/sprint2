@@ -2,7 +2,7 @@ package Sprint2.controllers;
 
 import java.util.List;
 
-import Sprint2.Services.StatistiqueFeedbackServiceImpl;
+import Sprint2.services.StatistiqueFeedbackServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

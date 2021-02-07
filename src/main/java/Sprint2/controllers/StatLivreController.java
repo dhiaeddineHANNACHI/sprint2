@@ -1,7 +1,7 @@
 package Sprint2.controllers;
 
-import Sprint2.Services.StatistiqueLivreServiceImpl;
 import Sprint2.entities.Livre;
+import Sprint2.services.StatistiqueLivreServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.HttpHeaders;

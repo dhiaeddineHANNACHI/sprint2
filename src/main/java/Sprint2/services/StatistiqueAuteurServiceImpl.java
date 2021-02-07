@@ -1,9 +1,8 @@
 package Sprint2.services;
 
-import Sprint2.Repository.StatAuteurRepository;
-import Sprint2.Repository.StatFeedbackRepository;
 import Sprint2.entities.Auteur;
 import Sprint2.entities.Feedback;
+import Sprint2.repositories.StatAuteurRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

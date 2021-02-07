@@ -1,9 +1,8 @@
 package Sprint2.controllers;
 
-import Sprint2.Services.StatistiqueAuteurServiceImpl;
-import Sprint2.Services.StatistiqueGenreServiceImpl;
 import Sprint2.entities.Auteur;
 import Sprint2.entities.Genre;
+import Sprint2.services.StatistiqueGenreServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

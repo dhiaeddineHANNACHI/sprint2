@@ -2,7 +2,7 @@ package Sprint2.services;
 
 import java.util.List;
 
-import Sprint2.Repository.StatFeedbackRepository;
+import Sprint2.repositories.StatFeedbackRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
