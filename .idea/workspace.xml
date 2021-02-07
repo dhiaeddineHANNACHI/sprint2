@@ -26,28 +26,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="830b3710-d98c-479f-9290-d1641bf49bd9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Sprint2/controllers/CommandeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Sprint2/controllers/FactureController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Sprint2/entities/Facture.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Sprint2/exception/ErrorResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Sprint2/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Sprint2/exception/ResourceNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Sprint2/repositories/CommandeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Sprint2/repositories/FactureRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Sprint2/repositories/StatisticsVenteRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Sprint2/services/CommandeServcieImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Sprint2/services/FactureServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Sprint2/services/ICommandeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Sprint2/services/IFactureService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Sprint2/services/IServiceStatisticsVente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Sprint2/services/ServiceNLP.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Sprint2/services/ServiceStatisticsVenteImp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sprint2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Sprint2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sprint2/Sprint2Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sprint2/Sprint2Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sprint2/controllers/EditionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sprint2/controllers/EditionController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Sprint2/entities/Commande.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sprint2/entities/Commande.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sprint2/entities/Membre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sprint2/entities/Membre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sprint2/services/CommandeServcieImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sprint2/services/CommandeServcieImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/SpringBootTimeSheet/Sprint2/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/SpringBootTimeSheet/Sprint2/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/Sprint2Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/Sprint2Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/controllers/AuteurController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/controllers/AuteurController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/controllers/EditionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/controllers/EditionController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/controllers/GenreController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/controllers/GenreController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/controllers/LivreController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/controllers/LivreController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/entities/Auteur.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/entities/Auteur.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/entities/Commande.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/entities/Commande.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/entities/Edition.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/entities/Edition.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/entities/Feedback.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/entities/Feedback.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/entities/Genre.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/entities/Genre.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/entities/Gerant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/entities/Gerant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/entities/Livre.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/entities/Livre.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/entities/Membre.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/entities/Membre.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/entities/Notification.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/entities/Notification.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/entities/Proprietaire.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/entities/Proprietaire.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/entities/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/entities/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/repositories/AuteurRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/repositories/AuteurRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/repositories/EditionRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/repositories/EditionRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/repositories/GenreRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/repositories/GenreRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/repositories/LivreRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/repositories/LivreRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/services/AuteurMetier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/services/AuteurMetier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/services/AuteurMetierImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/services/AuteurMetierImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/services/EditionMetier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/services/EditionMetier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/services/EditionMetierImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/services/EditionMetierImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/services/GenreMetier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/services/GenreMetier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/services/GenreMetierImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/services/GenreMetierImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/services/LivreMetier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/services/LivreMetier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/services/LivreMetierImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/services/LivreMetierImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Sprint2/Sprint2ApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Sprint2/Sprint2ApplicationTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +91,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -157,13 +177,50 @@
       <screen x="1920" y="181" width="1600" height="860" />
     </state>
     <state x="2500" y="366" key="FileChooserDialogImpl/0.0.1536.824/1920.181.1600.860@1920.181.1600.860" timestamp="1612727701494" />
-    <state x="2312" y="344" key="Vcs.Push.Dialog.v2" timestamp="1612727531256">
+    <state width="1557" height="366" key="GridCell.Tab.0.bottom" timestamp="1612729012511">
       <screen x="1920" y="181" width="1600" height="860" />
     </state>
-    <state x="2312" y="344" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.181.1600.860@1920.181.1600.860" timestamp="1612727531256" />
+    <state width="1557" height="366" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.181.1600.860@1920.181.1600.860" timestamp="1612729012511" />
+    <state width="1557" height="366" key="GridCell.Tab.0.center" timestamp="1612729012511">
+      <screen x="1920" y="181" width="1600" height="860" />
+    </state>
+    <state width="1557" height="366" key="GridCell.Tab.0.center/0.0.1536.824/1920.181.1600.860@1920.181.1600.860" timestamp="1612729012511" />
+    <state width="1557" height="366" key="GridCell.Tab.0.left" timestamp="1612729012511">
+      <screen x="1920" y="181" width="1600" height="860" />
+    </state>
+    <state width="1557" height="366" key="GridCell.Tab.0.left/0.0.1536.824/1920.181.1600.860@1920.181.1600.860" timestamp="1612729012511" />
+    <state width="1557" height="366" key="GridCell.Tab.0.right" timestamp="1612729012511">
+      <screen x="1920" y="181" width="1600" height="860" />
+    </state>
+    <state width="1557" height="366" key="GridCell.Tab.0.right/0.0.1536.824/1920.181.1600.860@1920.181.1600.860" timestamp="1612729012511" />
+    <state width="1557" height="366" key="GridCell.Tab.1.bottom" timestamp="1612729012511">
+      <screen x="1920" y="181" width="1600" height="860" />
+    </state>
+    <state width="1557" height="366" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.181.1600.860@1920.181.1600.860" timestamp="1612729012511" />
+    <state width="1557" height="366" key="GridCell.Tab.1.center" timestamp="1612729012511">
+      <screen x="1920" y="181" width="1600" height="860" />
+    </state>
+    <state width="1557" height="366" key="GridCell.Tab.1.center/0.0.1536.824/1920.181.1600.860@1920.181.1600.860" timestamp="1612729012511" />
+    <state width="1557" height="366" key="GridCell.Tab.1.left" timestamp="1612729012511">
+      <screen x="1920" y="181" width="1600" height="860" />
+    </state>
+    <state width="1557" height="366" key="GridCell.Tab.1.left/0.0.1536.824/1920.181.1600.860@1920.181.1600.860" timestamp="1612729012511" />
+    <state width="1557" height="366" key="GridCell.Tab.1.right" timestamp="1612729012511">
+      <screen x="1920" y="181" width="1600" height="860" />
+    </state>
+    <state width="1557" height="366" key="GridCell.Tab.1.right/0.0.1536.824/1920.181.1600.860@1920.181.1600.860" timestamp="1612729012511" />
+    <state x="376" y="156" key="Vcs.Push.Dialog.v2" timestamp="1612730871756">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="376" y="156" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.181.1600.860@0.0.1536.824" timestamp="1612730871756" />
+    <state x="2312" y="344" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.181.1600.860@1920.181.1600.860" timestamp="1612728426488" />
     <state x="2535" y="389" key="chooseDestDirectoryDialog" timestamp="1612727750039">
       <screen x="1920" y="181" width="1600" height="860" />
     </state>
     <state x="2535" y="389" key="chooseDestDirectoryDialog/0.0.1536.824/1920.181.1600.860@1920.181.1600.860" timestamp="1612727750039" />
+    <state x="2465" y="324" key="git4idea.branch.GitSmartOperationDialog" timestamp="1612729155911">
+      <screen x="1920" y="181" width="1600" height="860" />
+    </state>
+    <state x="2465" y="324" key="git4idea.branch.GitSmartOperationDialog/0.0.1536.824/1920.181.1600.860@1920.181.1600.860" timestamp="1612729155911" />
   </component>
 </project>

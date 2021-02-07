@@ -71,7 +71,7 @@ public class Commande implements Serializable
 		result = prime * result + ((date_com == null) ? 0 : date_com.hashCode());
 		return result;
 	}
-	
+
 	public List<Livre> getLivres() {
 		return livres;
 	}

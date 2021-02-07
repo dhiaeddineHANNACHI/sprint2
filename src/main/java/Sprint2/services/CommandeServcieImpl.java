@@ -1,7 +1,7 @@
 package Sprint2.services;
 
 import Sprint2.entities.Commande;
-import Sprint2.repository.CommandeRepository;
+import Sprint2.repositories.CommandeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
