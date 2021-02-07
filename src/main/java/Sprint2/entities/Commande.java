@@ -7,7 +7,9 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 public class Commande implements Serializable
@@ -26,6 +28,10 @@ public class Commande implements Serializable
 	}
 	@ManyToOne
 	private Membre membre;
+	@OneToMany(mappedBy = "commande")
+    private Set<Reclamation> reclams = new HashSet<Reclamation>();
+	
+	
 	public Commande(@NotNull Date date_com, int livraison) {
 		super();
 		this.date_com = date_com;
@@ -118,6 +124,12 @@ public class Commande implements Serializable
 		this.id = id;
 		this.date_com = date_com;
 		this.livraison = livraison;
+	}
+	public Set<Reclamation> getReclams() {
+		return reclams;
+	}
+	public void setReclams(Set<Reclamation> reclams) {
+		this.reclams = reclams;
 	}
 	@Override
 	public String toString()
