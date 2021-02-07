@@ -27,13 +27,7 @@ public class Gerant extends User{
         super();
     }
 
-    public Gerant(int id, String nom, String prenom, String username, String password, String email,
-                  String adresse, String role, String rib,double salaire, String matricule) {
-        super(id, nom, prenom, username, password, email, adresse, role);
-        this.rib=rib;
-        this.matricule=matricule;
-        this.salaire=salaire;
-    }
+   
     public Gerant(String nom, String prenom, String username, String password, String email,
             String adresse, String role, String rib,double salaire, String matricule) {
         super(nom, prenom, username, password, email, adresse, role);

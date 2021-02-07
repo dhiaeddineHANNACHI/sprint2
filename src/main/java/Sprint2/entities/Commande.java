@@ -37,19 +37,22 @@ public class Commande {
     private int livraison=0;
     
     
-    @OneToMany(mappedBy = "commande")
-    private Set<LigneCommande> ligneCommandes = new HashSet<LigneCommande>();
-    public Set<LigneCommande> getLigneCommandes() {
-		return ligneCommandes;
-	}
+   
     
-    @ManyToOne
-    @JoinColumn(name ="id",referencedColumnName ="id",insertable = false,updatable = false)
-	private Membre membre;
+    
 	public Commande() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
+	public Commande(int id_com, @NotNull Date date_com, int livraison, Membre membre) {
+		super();
+		this.id_com = id_com;
+		this.date_com = date_com;
+		this.livraison = livraison;
+		
+	}
+
 	public Commande(@NotNull Date date_com, int livraison) {
 		super();
 		this.date_com = date_com;
@@ -67,18 +70,11 @@ public class Commande {
 	public void setLivraison(int livraison) {
 		this.livraison = livraison;
 	}
-	public Membre getMembre() {
-		return membre;
-	}
-	public void setMembre(Membre membre) {
-		this.membre = membre;
-	}
+	
 	public Date getDate_com() {
 		return date_com;
 	}
-	public void setLigneCommandes(Set<LigneCommande> ligneCommandes) {
-		this.ligneCommandes = ligneCommandes;
-	}
+	
 	@Override
 	public String toString() {
 		return "Commande [id_com=" + id_com + ", date_com=" + date_com + ", livraison=" + livraison + "]";

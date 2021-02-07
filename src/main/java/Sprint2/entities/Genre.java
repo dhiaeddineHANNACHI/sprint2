@@ -19,6 +19,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 public class Genre implements Serializable{
@@ -28,13 +29,15 @@ public class Genre implements Serializable{
 	@NotNull
 	@Size(min = 1, max = 13)
     private String nom_genre;
+	
     @JsonIgnore
-    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinTable(name = "livre_auteur",
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
+    @JoinTable(name = "livre_genre",
         joinColumns =  @JoinColumn(name = "id_genre"),
         inverseJoinColumns = @JoinColumn(name = "livre_id")
         )
-    private Set < Livre > livres = new HashSet < > ();
+    private Set < Livre > livres;
+    
 	public Genre() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -50,8 +53,19 @@ public class Genre implements Serializable{
 	public void setNom_genre(String nom_genre) {
 		this.nom_genre = nom_genre;
 	}
+	
+	public void setId_genre(int id_genre) {
+		this.id_genre = id_genre;
+	}
 	public int getId_genre() {
 		return id_genre;
+	}
+	
+	public Set<Livre> getLivres() {
+		return livres;
+	}
+	public void setLivres(Set<Livre> livres) {
+		this.livres = livres;
 	}
 	@Override
 	public String toString() {

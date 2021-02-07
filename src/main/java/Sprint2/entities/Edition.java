@@ -3,7 +3,9 @@ package Sprint2.entities;
 import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -15,6 +17,9 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 
@@ -34,8 +39,13 @@ public class Edition implements Serializable{
 	@Column
     private double latitude;
     
-    @OneToMany(mappedBy = "edition",fetch=FetchType.LAZY)
-    private List<Livre> livres;
+	@JsonIgnore
+    @OneToMany(mappedBy = "edition",fetch=FetchType.EAGER,cascade = CascadeType.REMOVE)
+    private Set<Livre> livres;
+
+	public void setAdresse(String adresse) {
+		this.adresse = adresse;
+	}
 
 	public Edition() {
 		super();
@@ -83,11 +93,11 @@ public class Edition implements Serializable{
 		this.latitude = latitude;
 	}
 
-	public List<Livre> getLivres() {
+	public Set<Livre> getLivres() {
 		return livres;
 	}
 
-	public void setLivres(List<Livre> livres) {
+	public void setLivres(Set<Livre> livres) {
 		this.livres = livres;
 	}
 

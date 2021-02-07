@@ -1,8 +1,8 @@
 package Sprint2.entities;
 
+import java.io.Serializable;
 import java.util.Date;
-import java.util.HashSet;
-import java.util.Objects;
+
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -22,8 +22,9 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
+
 @Entity
-public class Auteur {
+public class Auteur implements Serializable{
 	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private  int auteur_id;
 	@Column
@@ -43,13 +44,13 @@ public class Auteur {
 	@JsonFormat(pattern="yyyy-MM-dd")
     private Date date_naissance;
 	
-    @JsonIgnore
-    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@JsonIgnore
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
     @JoinTable(name = "livre_auteur",
         joinColumns =  @JoinColumn(name = "auteur_id"),
         inverseJoinColumns = @JoinColumn(name = "livre_id")
         )
-    private Set < Livre > livres = new HashSet < > ();
+    private Set < Livre > livres ;
 
     public Auteur() {
     }
@@ -133,6 +134,12 @@ public class Auteur {
 		if (auteur_id != other.auteur_id)
 			return false;
 		return true;
+	}
+
+	
+
+	public int getAuteur_id() {
+		return auteur_id;
 	}
 
 

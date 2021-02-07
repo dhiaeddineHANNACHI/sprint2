@@ -22,6 +22,7 @@ import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @Entity
 public class Feedback implements Serializable{
 	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -33,19 +34,23 @@ public class Feedback implements Serializable{
 	@NotNull
 	@Size(min = 1, max = 50)
     private String commentaire;
+	public void setCommentaire(String commentaire) {
+		this.commentaire = commentaire;
+	}
+
 	@ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "edition_id", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JsonIgnore
 	private Membre membre;
 	
-    @JsonIgnore
-    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JsonIgnoreProperties("feedbacks")
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
     @JoinTable(name = "livre_feedback",
         joinColumns =  @JoinColumn(name = "id_fb"),
         inverseJoinColumns = @JoinColumn(name = "livre_id")
         )
-    private Set < Livre > livres = new HashSet < > ();
+    private Set < Livre > livres ;
 
     public Feedback() {
     }
