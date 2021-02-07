@@ -1,68 +1,53 @@
 package Sprint2.entities;
 
-import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
-
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
-import javax.validation.constraints.NotNull;
-
-import org.springframework.boot.context.properties.bind.DefaultValue;
-
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-@Entity
-public class Commande {
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import java.io.Serializable;
+import java.util.Date;
+import java.util.List;
 
-	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
-    private int id_com;
+@Entity
+public class Commande implements Serializable
+{
+	@Id @GeneratedValue
+    private int id;
 	@Column
 	@NotNull 
 	@JsonFormat(pattern="yyyy-MM-dd")
+	@JsonIgnore
     private Date date_com;
 	@Column
     private int livraison=0;
-    
-    
-   
-    
-    
 	public Commande() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
-	
-	public Commande(int id_com, @NotNull Date date_com, int livraison, Membre membre) {
-		super();
-		this.id_com = id_com;
-		this.date_com = date_com;
-		this.livraison = livraison;
-		
-	}
-
+	@ManyToOne
+	private Membre membre;
 	public Commande(@NotNull Date date_com, int livraison) {
 		super();
 		this.date_com = date_com;
 		this.livraison = livraison;
 	}
-	public int getId_com() {
-		return id_com;
+	@OneToOne(mappedBy = "commande",fetch = FetchType.LAZY,cascade = CascadeType.REMOVE)
+	private Facture facture;
+	public void setDate_com(Date date_com)
+	{
+		this.date_com = date_com;
 	}
-	public void setId_com(int id_com) {
-		this.id_com = id_com;
+	public Facture getFacture() {
+		return facture;
+	}
+	public void setFacture(Facture facture) {
+		this.facture = facture;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id_com) {
+		this.id = id_com;
 	}
 	public int getLivraison() {
 		return livraison;
@@ -70,14 +55,14 @@ public class Commande {
 	public void setLivraison(int livraison) {
 		this.livraison = livraison;
 	}
-	
+	public Membre getMembre() {
+		return membre;
+	}
+	public void setMembre(Membre membre) {
+		this.membre = membre;
+	}
 	public Date getDate_com() {
 		return date_com;
-	}
-	
-	@Override
-	public String toString() {
-		return "Commande [id_com=" + id_com + ", date_com=" + date_com + ", livraison=" + livraison + "]";
 	}
 	@Override
 	public int hashCode() {
@@ -86,8 +71,27 @@ public class Commande {
 		result = prime * result + ((date_com == null) ? 0 : date_com.hashCode());
 		return result;
 	}
+	
+	public List<Livre> getLivres() {
+		return livres;
+	}
+	public void setLivres(List<Livre> livres) {
+		this.livres = livres;
+	}
+
+
+	@ManyToMany(fetch = FetchType.LAZY)
+	@JoinTable(name ="ligne_Commandes",
+			joinColumns =  @JoinColumn(name = "id_com"),
+			inverseJoinColumns = @JoinColumn(name = "livre_id"))
+	List<Livre> livres;
+
+
+
+
 	@Override
-	public boolean equals(Object obj) {
+	public boolean equals(Object obj)
+	{
 		if (this == obj)
 			return true;
 		if (obj == null)
@@ -102,5 +106,22 @@ public class Commande {
 			return false;
 		return true;
 	}
-    
+	public Commande(@NotNull Date date_com, int livraison, Membre membre)
+	{
+		this.date_com = date_com;
+		this.livraison = livraison;
+		this.membre = membre;
+	}
+	public Commande(int id, @NotNull Date date_com, int livraison)
+	{
+		super();
+		this.id = id;
+		this.date_com = date_com;
+		this.livraison = livraison;
+	}
+	@Override
+	public String toString()
+	{
+		return "Commande [id_com=" + id + ", date_com=" + date_com + ", livraison=" + livraison+"]";
+	}
 }

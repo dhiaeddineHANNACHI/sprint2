@@ -64,17 +64,17 @@ public class Livre implements Serializable {
 	@Column
 	@NotNull
 	private String image;
-	
-    @JsonIgnoreProperties("livres")
+
+	@JsonIgnoreProperties("livres")
 	@ManyToOne(fetch = FetchType.EAGER, optional = false)
 	@JoinColumn(name = "edition_id", nullable = false)
 	private Edition edition;
 
-    @JsonIgnoreProperties("livres")
+	@JsonIgnoreProperties("livres")
 	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(name = "livre_auteur",
-	joinColumns = @JoinColumn(name = "livre_id"),
-	inverseJoinColumns = @JoinColumn(name = "auteur_id"))
+			joinColumns = @JoinColumn(name = "livre_id"),
+			inverseJoinColumns = @JoinColumn(name = "auteur_id"))
 	private Set<Auteur> auteurs;
 
 	public void setLivre_id(int livre_id) {
@@ -91,21 +91,26 @@ public class Livre implements Serializable {
 
 	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(name = "livre_genre",
-	joinColumns = @JoinColumn(name = "livre_id"),
-	inverseJoinColumns = @JoinColumn(name = "id_genre"))
+			joinColumns = @JoinColumn(name = "livre_id"),
+			inverseJoinColumns = @JoinColumn(name = "id_genre"))
 	private Set<Genre> genres;
 
 	@JsonIgnoreProperties("livres")
 	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(name = "livre_feedback",
-	joinColumns = @JoinColumn(name = "livre_id"), 
-	inverseJoinColumns = @JoinColumn(name = "id_fb"))
+			joinColumns = @JoinColumn(name = "livre_id"),
+			inverseJoinColumns = @JoinColumn(name = "id_fb"))
 	private Set<Feedback> feedbacks;
 
-	
+	@ManyToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+	@JoinTable(name = "ligne_Commandes",
+			joinColumns =  @JoinColumn(name = "livre_id"),
+			inverseJoinColumns = @JoinColumn(name = "id_com"))
+	List<Commande> commandes;
+
 
 	public Livre(String titre_livre, String langue, String description, int nb_pages, int nb_exemplaires, String annee,
-			Double prix, String image) {
+				 Double prix, String image) {
 		this.titre_livre = titre_livre;
 		this.langue = langue;
 		this.description = description;
@@ -209,7 +214,7 @@ public class Livre implements Serializable {
 		return livre_id;
 	}
 
-	
+
 
 	@Override
 	public String toString() {
