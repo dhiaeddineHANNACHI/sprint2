@@ -19,13 +19,10 @@ public class Proprietaire extends User{
         super();
     }
 
-    public Proprietaire(int id, String nom, String prenom, String username,String password, String email, String adresse, String role,String immatriculation) {
-        super(id, nom, prenom, username, password, email, adresse, role);
-        this.immatriculation = immatriculation;
-    }
+  
 
-    public Proprietaire(String nom, String prenom, String username,String password, String email, String adresse, String role,String immatriculation) {
-        super(nom, prenom, username, password, email, adresse, role);
+    public Proprietaire(String nom, String prenom, String username,String password, String email, String adresse,String immatriculation) {
+        super(nom,  prenom,  username,  email,  password,  adresse);
         this.immatriculation = immatriculation;
     }
 

@@ -26,8 +26,8 @@ public class Membre extends User{
     }
 
 
-    public Membre(String nom, String prenom, String username, String password, String email, String adresse, String role, int numinscrit) {
-        super(nom, prenom, username,password, email, adresse, role);
+    public Membre(String nom, String prenom, String username, String password, String email, String adresse, int numinscrit) {
+        super(nom,  prenom,  username,  email,  password,  adresse);
         this.numinscrit = numinscrit;
     }
 

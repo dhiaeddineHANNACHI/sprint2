@@ -1,144 +1,146 @@
 package Sprint2.entities;
 
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
-public class User implements Serializable{
-	
-	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
+@Table(name = "users", uniqueConstraints = {
+		@UniqueConstraint(columnNames = "username"),
+		@UniqueConstraint(columnNames = "email") 
+		})
+
+public class User implements Serializable {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
+
+	@Column
+	@NotNull
+	@Size(min = 3, max = 20)
+	private String nom;
+
+	@Column
+	@NotNull
+	@Size(min = 3, max = 20)
+	private String prenom;
+
+	@Column
+	@NotNull
+	@Size(min = 5, max = 20)
+	private String username;
+
 	@Column
 	@NotNull
 	@Size(min = 1, max = 20)
-    private String nom;
-	@Column
-	@NotNull
-	@Size(min = 1, max = 20)
-    private String prenom;
-	@Column
-	@NotNull
-	@Size(min = 1, max = 20)
-    private String username;
-	@Column
-	@NotNull
-	@Size(min = 1, max = 20)
-    private String email;
-	@Column
-	@NotNull
-	@Size(min = 1, max = 20)
-    private String adresse;
-	@Column
-	@NotNull
-    private String role;
+	private String email;
+	
 	@Column
 	@NotNull
 	@Size(min = 5, max = 10)
-    private String password;
+	private String password;
 
+	@Column
+	@NotNull
+	@Size(min = 1, max = 20)
+	private String adresse;
 
-    public User() {
-    }
+	
 
+	@ManyToMany(fetch = FetchType.LAZY)
+	@JoinTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
+	private Set<Role> roles = new HashSet<>();
 
-    public User(int id, String nom, String prenom, String username,String password, String email, String adresse, String role) {
-    	    	
-        this.id = id;
-        this.nom = nom;
-        this.prenom = prenom;
-        this.username = username;
-        this.email = email;
-        this.adresse = adresse;
-        this.role = role;
-        this.password=password;        
-        
-    }
+	public User() {
+	}
 
-    public User(String nom, String prenom, String username,String password, String email, String adresse, String role) {
-        this.nom = nom;
-        this.prenom = prenom;
-        this.username = username;
-        this.email = email;
-        this.adresse = adresse;
-        this.role = role;
-        this.password=password;
-        
-
-    }
-
-
+	public User(String nom, String prenom, String username, String email, String password, String adresse) {
+		super();
+		this.nom = nom;
+		this.prenom = prenom;
+		this.username = username;
+		this.email = email;
+		this.adresse = adresse;
+		this.password = password;
+	}
 
 	public int getId() {
-        return id;
-    }
+		return id;
+	}
 
-    public void setId(int id) {
-        this.id = id;
-    }
+	public void setId(int id) {
+		this.id = id;
+	}
 
-    public String getNom() {
-        return nom;
-    }
+	public String getNom() {
+		return nom;
+	}
 
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
 
-    public String getPrenom() {
-        return prenom;
-    }
+	public String getPrenom() {
+		return prenom;
+	}
 
-    public void setPrenom(String prenom) {
-        this.prenom = prenom;
-    }
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
+	}
 
-    public String getUsername() {
-        return username;
-    }
+	public String getUsername() {
+		return username;
+	}
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
+	public void setUsername(String username) {
+		this.username = username;
+	}
 
-    public String getEmail() {
-        return email;
-    }
+	public String getEmail() {
+		return email;
+	}
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
-    public String getAdresse() {
-        return adresse;
-    }
+	public String getAdresse() {
+		return adresse;
+	}
 
-    public void setAdresse(String adresse) {
-        this.adresse = adresse;
-    }
+	public void setAdresse(String adresse) {
+		this.adresse = adresse;
+	}
 
-    public String getRole() {
-        return role;
-    }
+	public Set<Role> getRoles() {
+		return roles;
+	}
 
-    public void setRole(String role) {
-        this.role = role;
-    }
+	public void setRoles(Set<Role> roles) {
+		this.roles = roles;
+	}
 
-    
-    /**
+	/**
 	 * @return the password
 	 */
 	public String getPassword() {
 		return password;
 	}
-
 
 	/**
 	 * @param password the password to set
@@ -148,18 +150,15 @@ public class User implements Serializable{
 	}
 
 
-
-
-
-	
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", username=" + username + ", email=" + email
-				+ ", adresse=" + adresse + ", role=" + role + ", password=" + password + "]";
+				+ ", adresse=" + adresse + ", password=" + password + ", roles=" + roles + "]";
 	}
 
-
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#hashCode()
 	 */
 	@Override
@@ -172,8 +171,9 @@ public class User implements Serializable{
 		return result;
 	}
 
-
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#equals(java.lang.Object)
 	 */
 	@Override
@@ -201,3 +201,4 @@ public class User implements Serializable{
 	}
 
 }
+
