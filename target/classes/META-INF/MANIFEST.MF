@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Built-By: DELL
+Build-Jdk: 15
+Implementation-Title: Sprint2
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: SpringBootTimeSheet
+Implementation-URL: https://spring.io/projects/spring-boot/Sprint2
+Created-By: Maven Integration for Eclipse
+
