@@ -13,10 +13,13 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @Table(name = "users", uniqueConstraints = {
@@ -59,12 +62,16 @@ public class User implements Serializable {
 	@NotNull
 	@Size(min = 1, max = 20)
 	private String adresse;
-
-	
+	@JsonIgnoreProperties("affectedTo")
+    @OneToMany(mappedBy = "affectedTo")
+    private Set<Reclamation> reclams = new HashSet<Reclamation>();
 
 	@ManyToMany(fetch = FetchType.LAZY)
 	@JoinTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
 	private Set<Role> roles = new HashSet<>();
+
+    @OneToMany(mappedBy = "membre",fetch = FetchType.LAZY)
+    private Set<Feedback> feedbacks = new HashSet<Feedback>();
 
 	public User() {
 	}
@@ -133,6 +140,13 @@ public class User implements Serializable {
 
 	public void setRoles(Set<Role> roles) {
 		this.roles = roles;
+	}
+	public Set<Reclamation> getReclams() {
+		return reclams;
+	}
+
+	public void addReclam(Reclamation reclam) {
+		this.reclams.add(reclam);
 	}
 
 	/**

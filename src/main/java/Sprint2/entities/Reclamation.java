@@ -49,13 +49,14 @@ public class Reclamation {
 	@Column
     private String filePath;
     @ManyToOne
-    @JoinColumn(name ="affectedTo",referencedColumnName ="id",insertable = false,updatable = false)
-	private Gerant affectedTo;
+    @JoinColumn(name ="affectedTo",referencedColumnName ="id",updatable = false)
+	private User affectedTo;
     @ManyToOne
-    @JoinColumn(name ="id",referencedColumnName ="id",insertable = false,updatable = false)
+    @JoinColumn(name ="id",referencedColumnName ="id",updatable = false)
     private Commande commande;
-    
-	
+    @JsonIgnore
+    @OneToMany(mappedBy = "reclam",fetch=FetchType.EAGER,cascade = CascadeType.REMOVE)
+	private Set<Notification> notifs =new HashSet<Notification>();
 	
 	
 	@Override
@@ -91,17 +92,15 @@ public class Reclamation {
 
 	}
 	
-	public Reclamation(@NotNull @Size(min = 1, max = 20) String type, @NotNull String message,
-			@NotNull @Size(min = 1, max = 50) String etat, @NotNull Date date_reclamation, String filePath,
-			Gerant affectedTo, Commande command) {
+	public Reclamation( String type, String message,
+			String etat,  Date date_reclamation, String filePath) {
 		super();
 		this.type = type;
 		this.message = message;
 		this.etat = etat;
 		this.date_reclamation = date_reclamation;
 		this.filePath = filePath;
-		this.affectedTo = affectedTo;
-		this.commande = command;
+
 	}
 
 	
@@ -143,11 +142,11 @@ public class Reclamation {
 		this.filePath = filePath;
 	}
 
-	public Gerant getAffectedTo() {
+	public User getAffectedTo() {
 		return affectedTo;
 	}
 
-	public void setAffectedTo(Gerant affectedTo) {
+	public void setAffectedTo(User affectedTo) {
 		this.affectedTo = affectedTo;
 	}
 

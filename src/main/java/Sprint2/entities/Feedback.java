@@ -42,7 +42,7 @@ public class Feedback implements Serializable{
     @JoinColumn(name = "edition_id", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JsonIgnore
-	private Membre membre;
+	private User membre;
 	
     @JsonIgnoreProperties("feedbacks")
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
@@ -77,11 +77,11 @@ public class Feedback implements Serializable{
 		this.nb_etoile = nb_etoile;
 	}
 
-	public Membre getMembre() {
+	public User getMembre() {
 		return membre;
 	}
 
-	public void setMembre(Membre membre) {
+	public void setMembre(User membre) {
 		this.membre = membre;
 	}
 

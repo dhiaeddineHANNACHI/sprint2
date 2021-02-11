@@ -14,8 +14,6 @@ public class Membre extends User{
 	private int numinscrit;
 
 
-    @OneToMany(mappedBy = "membre",fetch = FetchType.LAZY)
-    private Set<Feedback> feedbacks = new HashSet<Feedback>();
 
 	@OneToMany(mappedBy = "membre",fetch = FetchType.LAZY)
     private Set<Commande> commandes = new HashSet<Commande>();
@@ -40,8 +38,5 @@ public class Membre extends User{
     }
 
 
-	@Override
-	public String toString() {
-		return "Membre [numinscrit=" + numinscrit + ", feedbacks=" + feedbacks + ", commandes=" + commandes + "]";
-	}    
+   
 }

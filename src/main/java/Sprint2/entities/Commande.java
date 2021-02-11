@@ -28,7 +28,7 @@ public class Commande implements Serializable
 	}
 	@ManyToOne
 	private Membre membre;
-	@OneToMany(mappedBy = "commande")
+	@OneToMany(mappedBy = "commande",fetch = FetchType.LAZY,cascade = CascadeType.REMOVE)
     private Set<Reclamation> reclams = new HashSet<Reclamation>();
 	
 	

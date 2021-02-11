@@ -32,7 +32,7 @@ public class Notification implements Serializable{
    private int vu=0;
     
     @ManyToOne
-    @JoinColumn(name ="reclam_id",referencedColumnName ="reclam_id",insertable = false,updatable = false)
+    @JoinColumn(name ="reclam_id",referencedColumnName ="reclam_id",updatable = false)
     private Reclamation reclam;
 
    public Notification() {

@@ -77,13 +77,7 @@ public class Gerant extends User{
         this.salaire = salaire;
     }
 
-	public Set<Reclamation> getReclams() {
-		return reclams;
-	}
 
-	public void setReclams(Set<Reclamation> reclams) {
-		this.reclams = reclams;
-	}
 
 	@Override
 	public String toString() {

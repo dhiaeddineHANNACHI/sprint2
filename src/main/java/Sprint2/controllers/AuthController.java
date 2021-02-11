@@ -116,7 +116,7 @@ import payload.response.MessageResponse;
 
 						break;
 					case "mod":
-						Role modRole = roleRepository.findByName(ERole.ROLE_MANAGER)
+						Role modRole = roleRepository.findByName(ERole.ROLE_MODERATOR)
 								.orElseThrow(() -> new RuntimeException("Error: Role is not found."));
 						roles.add(modRole);
 
