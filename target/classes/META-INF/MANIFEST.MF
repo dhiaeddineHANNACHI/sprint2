@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Built-By: user
+Built-By: DELL
 Build-Jdk: 15
 Implementation-Title: Sprint2
 Implementation-Version: 0.0.1-SNAPSHOT

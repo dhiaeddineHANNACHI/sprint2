@@ -116,7 +116,7 @@ import payload.response.MessageResponse;
 
 						break;
 					case "mod":
-						Role modRole = roleRepository.findByName(ERole.ROLE_MANAGER)
+						Role modRole = roleRepository.findByName(ERole.ROLE_MODERATOR)
 								.orElseThrow(() -> new RuntimeException("Error: Role is not found."));
 						roles.add(modRole);
 
@@ -132,7 +132,7 @@ import payload.response.MessageResponse;
 			user.setRoles(roles);
 			userRepository.save(user);
 
-			return ResponseEntity.ok(new MessageResponse("User registered successfully!"));
+			return ResponseEntity.ok(new MessageResponse("User registered successfully!"));	
 		}
 }
 

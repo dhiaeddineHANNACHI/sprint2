@@ -30,142 +30,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="830b3710-d98c-479f-9290-d1641bf49bd9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_jsonwebtoken_jjwt_0_9_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_4_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_4_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_4_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_test_5_4_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_4_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sprint2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Sprint2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Sprint2/controllers/PaiementController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Sprint2/entities/PaiementC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Sprint2/utils/Paiement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Sprint2/controllers/PaiementController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Sprint2/entities/PaiementC.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Sprint2/utils/Paiement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sprint2/Security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sprint2/Security/WebSecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Sprint2/controllers/AuteurController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sprint2/controllers/AuteurController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sprint2/controllers/CommandeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sprint2/controllers/CommandeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sprint2/controllers/EditionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sprint2/controllers/EditionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sprint2/controllers/GenreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sprint2/controllers/GenreController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sprint2/controllers/LivreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sprint2/controllers/LivreController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sprint2/services/AuteurMetier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sprint2/interfaces/AuteurMetier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sprint2/services/AuteurMetierImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sprint2/services/AuteurMetierImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sprint2/services/CommandeServcieImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sprint2/services/CommandeServcieImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sprint2/services/EditionMetier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sprint2/interfaces/EditionMetier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sprint2/services/EditionMetierImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sprint2/services/EditionMetierImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sprint2/services/FactureServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sprint2/services/FactureServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sprint2/services/FeedbackInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sprint2/interfaces/FeedbackInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sprint2/services/FeedbackService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sprint2/services/FeedbackService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sprint2/services/GenreMetier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sprint2/interfaces/GenreMetier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sprint2/services/GenreMetierImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sprint2/services/GenreMetierImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sprint2/services/ICommandeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sprint2/interfaces/ICommandeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sprint2/services/IFactureService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sprint2/interfaces/IFactureService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sprint2/services/IServiceStatisticsVente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sprint2/interfaces/IServiceStatisticsVente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sprint2/services/IStatistiqueAuteurService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sprint2/interfaces/IStatistiqueAuteurService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sprint2/services/IStatistiqueEditionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sprint2/interfaces/IStatistiqueEditionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sprint2/services/IStatistiqueFeedbackService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sprint2/interfaces/IStatistiqueFeedbackService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sprint2/services/IStatistiqueGenreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sprint2/interfaces/IStatistiqueGenreService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sprint2/services/IStatistiqueLivreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sprint2/interfaces/IStatistiqueLivreService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sprint2/services/LivreMetier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sprint2/interfaces/LivreMetier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sprint2/services/LivreMetierImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sprint2/services/LivreMetierImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sprint2/services/NotificationInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sprint2/interfaces/NotificationInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sprint2/services/NotificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sprint2/services/NotificationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sprint2/services/ReclamationInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sprint2/interfaces/ReclamationInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sprint2/services/ReclamationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sprint2/services/ReclamationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sprint2/services/ServiceNLP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sprint2/services/ServiceNLP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sprint2/services/ServiceStatisticsVenteImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sprint2/services/ServiceStatisticsVenteImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sprint2/services/StatistiqueAuteurServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sprint2/services/StatistiqueAuteurServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sprint2/services/StatistiqueEditionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sprint2/services/StatistiqueEditionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sprint2/services/StatistiqueFeedbackServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sprint2/services/StatistiqueFeedbackServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sprint2/services/StatistiqueGenreServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sprint2/services/StatistiqueGenreServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sprint2/services/StatistiqueLivreServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sprint2/services/StatistiqueLivreServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/Security/Services/UserDetailsImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/Security/Services/UserDetailsImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/Security/Services/UserDetailsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/Security/Services/UserDetailsServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sprint2/controllers/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sprint2/controllers/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sprint2/entities/ERole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sprint2/entities/ERole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Sprint2-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/Sprint2-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Sprint2-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/Sprint2-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/SpringBootTimeSheet/Sprint2/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/maven/SpringBootTimeSheet/Sprint2/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/SpringBootTimeSheet/Sprint2/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/maven/SpringBootTimeSheet/Sprint2/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/Security/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/Security/WebSecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/Security/jwt/AuthEntryPointJwt.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/Security/jwt/AuthEntryPointJwt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/Security/jwt/AuthTokenFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/Security/jwt/AuthTokenFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/Security/jwt/JwtUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/Security/jwt/JwtUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/Sprint2Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/Sprint2Application.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/controllers/AuteurController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/controllers/AuteurController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/controllers/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/controllers/AuthController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/controllers/CommandeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/controllers/CommandeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/controllers/EditionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/controllers/EditionController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/controllers/FactureController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/controllers/FactureController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/controllers/GenreController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/controllers/GenreController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/controllers/LivreController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/controllers/LivreController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/controllers/StatAuteurController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/controllers/StatAuteurController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/controllers/StatEditionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/controllers/StatEditionController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/controllers/StatFeedbackController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/controllers/StatFeedbackController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/controllers/StatGenreController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/controllers/StatGenreController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/controllers/StatLivreController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/controllers/StatLivreController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/entities/Auteur.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/entities/Auteur.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/entities/Commande.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/entities/Commande.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/entities/ERole.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/entities/ERole.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/entities/Edition.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/entities/Edition.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/entities/Facture.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/entities/Facture.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/entities/Feedback.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/entities/Feedback.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/entities/Genre.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/entities/Genre.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/entities/Gerant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/entities/Gerant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/entities/Livre.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/entities/Livre.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/entities/Membre.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/entities/Membre.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/entities/Notification.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/entities/Notification.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/entities/Proprietaire.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/entities/Proprietaire.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/entities/Reclamation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/entities/Reclamation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/entities/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/entities/Role.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/entities/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/entities/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/exception/ErrorResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/exception/ErrorResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/exception/GlobalExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/exception/GlobalExceptionHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/exception/ResourceNotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/exception/ResourceNotFoundException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/repositories/AuteurRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/repositories/AuteurRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/repositories/CommandeRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/repositories/CommandeRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/repositories/EditionRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/repositories/EditionRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/repositories/FactureRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/repositories/FactureRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/repositories/FeedbackRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/repositories/FeedbackRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/repositories/GenreRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/repositories/GenreRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/repositories/LivreRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/repositories/LivreRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/repositories/NotificationRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/repositories/NotificationRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/repositories/ReclamationRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/repositories/ReclamationRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/repositories/RoleRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/repositories/RoleRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/repositories/StatAuteurRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/repositories/StatAuteurRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/repositories/StatEditionRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/repositories/StatEditionRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/repositories/StatFeedbackRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/repositories/StatFeedbackRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/repositories/StatGenreRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/repositories/StatGenreRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/repositories/StatLivreRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/repositories/StatLivreRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/repositories/StatisticsVenteRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/repositories/StatisticsVenteRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/repositories/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/repositories/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/services/AuteurMetier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/services/AuteurMetier.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/services/AuteurMetierImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/services/AuteurMetierImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/services/CommandeServcieImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/services/CommandeServcieImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/services/EditionMetier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/services/EditionMetier.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/services/EditionMetierImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/services/EditionMetierImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/services/FactureServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/services/FactureServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/services/FeedbackInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/services/FeedbackInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/services/FeedbackService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/services/FeedbackService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/services/GenreMetier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/services/GenreMetier.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/services/GenreMetierImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/services/GenreMetierImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/services/ICommandeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/services/ICommandeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/services/IFactureService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/services/IFactureService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/services/IServiceStatisticsVente.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/services/IServiceStatisticsVente.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/services/IStatistiqueAuteurService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/services/IStatistiqueAuteurService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/services/IStatistiqueEditionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/services/IStatistiqueEditionService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/services/IStatistiqueFeedbackService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/services/IStatistiqueFeedbackService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/services/IStatistiqueGenreService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/services/IStatistiqueGenreService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/services/IStatistiqueLivreService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/services/IStatistiqueLivreService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/services/LivreMetier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/services/LivreMetier.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/services/LivreMetierImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/services/LivreMetierImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/services/NotificationInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/services/NotificationInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/services/NotificationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/services/NotificationService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/services/ReclamationInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/services/ReclamationInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/services/ReclamationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/services/ReclamationService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/services/ServiceNLP.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/services/ServiceNLP.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/services/ServiceStatisticsVenteImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/services/ServiceStatisticsVenteImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/services/StatistiqueAuteurServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/services/StatistiqueAuteurServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/services/StatistiqueEditionServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/services/StatistiqueEditionServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/services/StatistiqueFeedbackServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/services/StatistiqueFeedbackServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/services/StatistiqueGenreServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/services/StatistiqueGenreServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sprint2/services/StatistiqueLivreServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sprint2/services/StatistiqueLivreServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/payload/request/LoginRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/payload/request/LoginRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/payload/request/SignupRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/payload/request/SignupRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/payload/response/JwtResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/payload/response/JwtResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/payload/response/MessageResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/payload/response/MessageResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Sprint2/Sprint2ApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Sprint2/Sprint2ApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2021-02-08T00-21-11_425-jvmRun1.dump" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/Sprint2.Sprint2ApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/Sprint2.Sprint2ApplicationTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-Sprint2.Sprint2ApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-Sprint2.Sprint2ApplicationTests.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -250,7 +137,7 @@
       <workItem from="1612045747576" duration="26000" />
       <workItem from="1612913041220" duration="597000" />
       <workItem from="1612989499649" duration="2698000" />
-      <workItem from="1613043404115" duration="2779000" />
+      <workItem from="1613043404115" duration="3116000" />
     </task>
     <servers />
   </component>
@@ -334,6 +221,14 @@
     <state width="1557" height="366" key="GridCell.Tab.1.right/0.0.1536.824/1920.181.1600.860@1920.181.1600.860" timestamp="1612729012511" />
     <state width="1557" height="295" key="GridCell.Tab.1.right/0.0.1536.824/1920.182.1600.860@1920.182.1600.860" timestamp="1613005240863" />
     <state width="1493" height="279" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1613045395847" />
+    <state x="147" y="65" key="MergeDialog" timestamp="1613046519533">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="147" y="65" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1613046519533" />
+    <state x="407" y="174" key="MultipleFileMergeDialog" timestamp="1613046555747">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="407" y="174" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1613046555747" />
     <state x="376" y="156" key="Vcs.Push.Dialog.v2" timestamp="1612730871756">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
