@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import Sprint2.entities.Notification;
-import Sprint2.services.NotificationInterface;
+import Sprint2.interfaces.NotificationInterface;
 import Sprint2.repositories.NotificationRepository;
 
 @Service

@@ -2,17 +2,16 @@ package Sprint2.services;
 
 
 import java.util.List;
-import java.util.Set;
 
+import Sprint2.interfaces.EditionMetier;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import Sprint2.entities.Edition;
-import Sprint2.entities.Livre;
 import Sprint2.repositories.EditionRepository;
 
 @Service
-public class EditionMetierImpl implements EditionMetier{
+public class EditionMetierImpl implements EditionMetier {
 
 	@Autowired
 	EditionRepository editionRepository;

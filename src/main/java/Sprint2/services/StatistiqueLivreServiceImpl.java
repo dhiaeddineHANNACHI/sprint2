@@ -2,6 +2,7 @@ package Sprint2.services;
 
 import java.util.List;
 
+import Sprint2.interfaces.IStatistiqueLivreService;
 import Sprint2.repositories.StatLivreRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -17,6 +17,7 @@ import org.springframework.web.multipart.MultipartFile;
 import Sprint2.entities.Notification;
 import Sprint2.entities.Reclamation;
 import Sprint2.entities.User;
+import Sprint2.interfaces.ReclamationInterface;
 import Sprint2.repositories.NotificationRepository;
 import Sprint2.repositories.ReclamationRepository;
 import Sprint2.repositories.UserRepository;

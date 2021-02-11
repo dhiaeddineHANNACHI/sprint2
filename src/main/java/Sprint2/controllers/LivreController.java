@@ -17,7 +17,7 @@ import Sprint2.entities.Auteur;
 import Sprint2.entities.Edition;
 import Sprint2.entities.Genre;
 import Sprint2.entities.Livre;
-import Sprint2.services.LivreMetier;
+import Sprint2.interfaces.LivreMetier;
 
 @RestController
 public class LivreController {

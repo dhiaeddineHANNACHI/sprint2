@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import Sprint2.entities.Feedback;
 
-import Sprint2.services.FeedbackInterface;
+import Sprint2.interfaces.FeedbackInterface;
 import Sprint2.repositories.FeedbackRepository;
 
 
