@@ -1,6 +1,7 @@
 package Sprint2.services;
 
 import Sprint2.entities.Edition;
+import Sprint2.interfaces.IStatistiqueEditionService;
 import Sprint2.repositories.StatEditionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -2,16 +2,15 @@ package Sprint2.services;
 
 
 import java.util.List;
-import java.util.Set;
 
+import Sprint2.interfaces.AuteurMetier;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import Sprint2.entities.Auteur;
-import Sprint2.entities.Livre;
 import Sprint2.repositories.AuteurRepository;
 @Service
-public class AuteurMetierImpl implements AuteurMetier{
+public class AuteurMetierImpl implements AuteurMetier {
 	
 	
 @Autowired

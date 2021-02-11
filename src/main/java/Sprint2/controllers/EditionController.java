@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import Sprint2.entities.Edition;
-import Sprint2.services.EditionMetier;
+import Sprint2.interfaces.EditionMetier;
 
 
 

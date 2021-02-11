@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import Sprint2.entities.Genre;
 
-import Sprint2.services.GenreMetier;
+import Sprint2.interfaces.GenreMetier;
 
 
 @RestController

@@ -2,6 +2,7 @@ package Sprint2.services;
 
 
 import Sprint2.entities.Facture;
+import Sprint2.interfaces.IServiceStatisticsVente;
 import Sprint2.repositories.StatisticsVenteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class ServiceStatisticsVenteImp  implements IServiceStatisticsVente{
+public class ServiceStatisticsVenteImp  implements IServiceStatisticsVente {
 
     @Autowired
     StatisticsVenteRepository statisticsVente;

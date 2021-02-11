@@ -1,7 +1,6 @@
 package Sprint2.controllers;
 
 import java.util.List;
-import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,8 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import Sprint2.entities.Auteur;
-import Sprint2.entities.Livre;
-import Sprint2.services.AuteurMetier;
+import Sprint2.interfaces.AuteurMetier;
 
 
 @RestController

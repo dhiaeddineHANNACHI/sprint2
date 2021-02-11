@@ -1,6 +1,7 @@
 package Sprint2.services;
 
 import Sprint2.entities.Facture;
+import Sprint2.interfaces.IFactureService;
 import Sprint2.repositories.FactureRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,4 +1,4 @@
-package Sprint2.services;
+package Sprint2.interfaces;
 
 import Sprint2.entities.Genre;
 

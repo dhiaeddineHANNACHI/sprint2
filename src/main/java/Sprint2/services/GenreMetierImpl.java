@@ -1,18 +1,17 @@
 package Sprint2.services;
 
 import java.util.List;
-import java.util.Set;
 
+import Sprint2.interfaces.GenreMetier;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 
 import Sprint2.entities.Genre;
-import Sprint2.entities.Livre;
 import Sprint2.repositories.GenreRepository;
 
 @Service
-public class GenreMetierImpl implements GenreMetier{
+public class GenreMetierImpl implements GenreMetier {
 
 	@Autowired
 	private GenreRepository genreRepository;

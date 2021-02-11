@@ -6,11 +6,9 @@ import java.util.Set;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import Sprint2.entities.Gerant;
 import Sprint2.entities.Notification;
 import Sprint2.entities.Reclamation;
-import Sprint2.services.ReclamationInterface;
-import Sprint2.repositories.NotificationRepository;
+import Sprint2.interfaces.ReclamationInterface;
 import Sprint2.repositories.ReclamationRepository;;
 
 

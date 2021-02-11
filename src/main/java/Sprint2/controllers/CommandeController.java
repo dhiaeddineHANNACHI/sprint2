@@ -44,7 +44,14 @@ public class CommandeController
     }
 
     @PostMapping(value = "/nlp/{mseg}")
-    private String  getNlpFeedBack(@PathVariable(value = "mseg") String mseg) throws IOException {
+    public String  getNlpFeedBack(@PathVariable(value = "mseg") String mseg) throws IOException {
+        System.out.println(serviceNLP.NLP(mseg));
         return serviceNLP.NLP(mseg);
+    }
+
+
+    @PostMapping(value = "/chat/{mseg}")
+    public String  getchatboot(@PathVariable(value = "mseg") String mseg) throws IOException {
+        return serviceNLP.chat(mseg);
     }
 }
